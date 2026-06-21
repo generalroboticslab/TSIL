@@ -1,0 +1,10 @@
+id: ihsc
+description_fragment: infinite-horizon training from scratch with step cost
+log_name_token: ihsc
+method_suffix_token: IHSC
+args:
+  fix_priv: true
+  update_ddl: false
+  value_bootstrap: true
+  successRewardScale: 100
+  step_cost: 0.01

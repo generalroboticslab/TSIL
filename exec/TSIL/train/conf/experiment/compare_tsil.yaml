@@ -1,0 +1,4 @@
+id: compare_tsil
+args:
+  result_experiment_name: compare_tsil
+  sil_analysis_interval: 10

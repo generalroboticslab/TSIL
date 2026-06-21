@@ -1,0 +1,12 @@
+id: ihd2s
+description_fragment: infinite-horizon training from scratch with dense-to-sparse reward annealing
+log_name_token: ihd2s
+method_suffix_token: IHD2S
+args:
+  fix_priv: true
+  update_ddl: false
+  value_bootstrap: true
+  successRewardScale: 100
+  dense_reward_scale: [1.0, 0.0]
+  dense_reward_mode: hard
+  hard_clip: 0.5

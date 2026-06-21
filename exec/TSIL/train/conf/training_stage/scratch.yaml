@@ -1,0 +1,7 @@
+id: scratch
+args:
+  result_training_stage_name: scratch
+  init_curri_ratio: 0.0
+  total_timesteps: 50000000
+  beta: false
+  record_env0_trajectory: false

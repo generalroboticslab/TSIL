@@ -1,0 +1,11 @@
+id: sweep_suc_rew
+value_suffixes:
+  reward_scale:
+    "10": "1e1"
+    "100": "1e2"
+    "1000": "1e3"
+    "10000": "1e4"
+    "100000": "1e5"
+    "1000000": "1e6"
+args:
+  result_experiment_name: sweep_suc_rew

@@ -1,0 +1,10 @@
+id: sweep_clip
+description_suffix: PPO clip-ratio stress sweep
+value_suffixes:
+  clip_coef:
+    "0.3": Clip0.3
+    "0.5": Clip0.5
+    "0.7": Clip0.7
+args:
+  result_experiment_name: sweep_clip
+  clip_coef: 0.5

@@ -1,0 +1,12 @@
+id: policy_grad_noise
+description_suffix: policy-gradient noise stress sweep
+value_suffixes:
+  policy_grad_noise_scale:
+    "5": PGradN5
+    "10": PGradN10
+    "20": PGradN20
+args:
+  result_experiment_name: policy_grad_noise
+  policy_grad_noise_scale: 20.0
+  target_kl: null
+  max_grad_norm: 1000000000.0

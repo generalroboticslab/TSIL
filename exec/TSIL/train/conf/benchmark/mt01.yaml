@@ -1,0 +1,7 @@
+id: mt01
+description_prefix: Single-task MT01
+task_name_prefix: MT01_T
+args:
+  result_dir: results/TSIL/train_res
+  result_benchmark_name: mt01
+  same_init_config_per_task: False

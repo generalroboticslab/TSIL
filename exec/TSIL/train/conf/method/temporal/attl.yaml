@@ -1,0 +1,11 @@
+id: attl
+description_fragment: time-aware training from scratch with adaptive time limits
+log_name_token: attl
+method_suffix_token: null
+args:
+  fix_linvel: true
+  fix_limvel: true
+  update_ddl: true
+  value_bootstrap: true
+  successRewardScale: 0
+  epstimeRewardScale: [100, 100]

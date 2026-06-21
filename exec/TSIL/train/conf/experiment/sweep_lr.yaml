@@ -1,0 +1,12 @@
+id: sweep_lr
+description_suffix: learning-rate stress sweep
+value_suffixes:
+  lr:
+    "0.001": LR1e-3
+    "0.005": LR5e-3
+    "0.01": LR1e-2
+    "0.02": LR2e-2
+    "0.05": LR5e-2
+args:
+  result_experiment_name: sweep_lr
+  lr: 0.005

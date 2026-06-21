@@ -1,0 +1,16 @@
+id: tsil
+description_fragment_by_benchmark:
+  default: trajectory-level fastest-success SIL replay
+log_name_token_by_benchmark:
+  default: tsil
+method_suffix_token: TSIL
+args:
+  use_sil: true
+  sil_mode: sil
+  sil_source: fastest
+  sil_topk: 5
+  sil_batch_size: 20480
+  sil_sample_unit: trajectory
+  sil_coef: 0.05
+  sil_success_sample_frac: 0.5
+  sil_normalize_gap: true

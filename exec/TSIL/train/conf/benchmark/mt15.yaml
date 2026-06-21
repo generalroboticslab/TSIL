@@ -1,0 +1,6 @@
+id: mt15
+description_prefix: Single-task MT15
+task_name_prefix: MT15_T
+args:
+  result_dir: results/TSIL/train_res
+  result_benchmark_name: mt15

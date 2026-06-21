@@ -1,0 +1,14 @@
+id: tsil_notrain
+description_fragment_by_benchmark:
+  default: archive fastest-success trajectories without SIL replay training
+log_name_token_by_benchmark:
+  default: tsil_notrain
+method_suffix_token: TSIL_NOTRAIN
+args:
+  use_sil: true
+  sil_train: false
+  sil_mode: sil
+  sil_source: fastest
+  sil_topk: 5
+  sil_batch_size: 20480
+  sil_coef: 0.05

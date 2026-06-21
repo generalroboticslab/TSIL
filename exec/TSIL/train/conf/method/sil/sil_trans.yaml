@@ -1,0 +1,15 @@
+id: sil_trans
+description_fragment_by_benchmark:
+  default: transition-level SIL replay from return memory
+log_name_token_by_benchmark:
+  default: sil_trans
+method_suffix_token: SIL_TRANS
+args:
+  use_sil: true
+  sil_mode: sil
+  sil_source: return
+  sil_topk: 5
+  sil_batch_size: 20480
+  sil_sample_unit: transition
+  sil_coef: 0.05
+  sil_normalize_gap: true

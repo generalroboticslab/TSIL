@@ -1,0 +1,10 @@
+id: sweep_tsil_coef
+value_suffixes:
+  sil_coef:
+    "0.001": "1e-3"
+    "0.01": "1e-2"
+    "0.1": "1e-1"
+    "1": "1e0"
+    "10": "1e1"
+args:
+  result_experiment_name: sweep_tsil_coef

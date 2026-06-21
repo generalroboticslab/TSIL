@@ -1,0 +1,48 @@
+defaults:
+  - benchmark: mt01
+  - experiment: compare_temporal
+  - training_stage: scratch
+  - method/sil: "off"
+  - method/temporal: attl
+  - override hydra/job_logging: disabled
+  - _self_
+
+task_id: null
+seed: null
+script_time: null
+dry_run: false
+print_config: false
+python_executable: null
+force_args: {}
+launch:
+  gpus: [0, 1, 2, 3, 4, 5, 6, 7]
+  n_jobs: 8
+
+method_components:
+  - sil
+  - temporal
+
+method_metadata_order:
+  - temporal
+  - sil
+
+train:
+  python_module: projects.TSIL.train
+  args:
+    task_counts: [6400]
+    termination_on_success: true
+    minibatch_size: 20480
+    graphics_device_id: -1
+    saving: true
+
+metadata:
+  base_log_name: scratch
+
+hydra:
+  job:
+    chdir: false
+  run:
+    dir: results/TSIL/hydra_res/${benchmark.id}/${experiment.id}/${training_stage.id}/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: results/TSIL/hydra_res/${benchmark.id}/${experiment.id}/${training_stage.id}/${now:%Y-%m-%d}/${now:%H-%M-%S}
+    subdir: ${hydra.job.num}

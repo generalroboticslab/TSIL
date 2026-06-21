@@ -1,0 +1,9 @@
+id: ih
+description_fragment: training from scratch with adaptive time limits
+log_name_token: null
+method_suffix_token: null
+args:
+  fix_priv: true
+  update_ddl: false
+  value_bootstrap: true
+  successRewardScale: 100

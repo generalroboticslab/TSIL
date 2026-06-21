@@ -1,0 +1,11 @@
+id: dense_dropout
+description_suffix: dense reward dropout
+value_suffixes:
+  dense_reward_dropout_p:
+    "0.4": Drop0.4
+    "0.6": Drop0.6
+    "0.8": Drop0.8
+args:
+  result_experiment_name: dense_dropout
+  dense_reward_dropout_p: 0.6
+  dense_reward_dropout_mode: episode
