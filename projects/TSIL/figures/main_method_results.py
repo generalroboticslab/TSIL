@@ -168,14 +168,10 @@ def _collect_main_rows(runs_by_method, task_ids, methods, x_key, tail_frac):
                 if success is None:
                     continue
 
-                success_time = _success_metrics(
-                    _load_curve(run_folder, "misc/interaction_time", "reward/success"),
-                    tail_frac,
-                )
-                episode_x = (
-                    success_time["tail_best_x"]
-                    if success_time is not None
-                    else math.nan
+                success_episode_curve = _load_curve(
+                    run_folder,
+                    "misc/interaction_time",
+                    "misc/success_episodes",
                 )
                 rows.append({
                     "method": method,
@@ -186,15 +182,8 @@ def _collect_main_rows(runs_by_method, task_ids, methods, x_key, tail_frac):
                         _load_curve(run_folder, x_key, "signal/success_eps_time"),
                         success["tail_best_x"],
                     ),
-                    "success_episodes": _interp_at(
-                        _load_curve(run_folder, "misc/interaction_time", "misc/success_episodes"),
-                        episode_x,
-                    ),
+                    "success_episodes": _last_value(success_episode_curve),
                 })
-                if not math.isfinite(rows[-1]["success_episodes"]):
-                    rows[-1]["success_episodes"] = _last_value(
-                        _load_curve(run_folder, "misc/interaction_time", "misc/success_episodes")
-                    )
     return rows
 
 

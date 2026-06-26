@@ -657,7 +657,8 @@ def _run_benchmark_train_curve(args, project_name, is_summary: bool):
     )
 
     bar_selected_x = None
-    if is_summary and y_key != "reward/success":
+    final_bar_metric = y_key == "misc/success_episodes"
+    if is_summary and y_key != "reward/success" and not final_bar_metric:
         bar_selected_x = _load_success_selected_x(
             plot_exts,
             train_res_dir,
@@ -688,12 +689,13 @@ def _run_benchmark_train_curve(args, project_name, is_summary: bool):
             x_label=_train_curve_x_label(x_key),
             y_label=y_label,
             curve_title=f"Aggregate {y_label}",
-            bar_title=f"{'Selected' if bar_selected_x is not None else 'Best'} {y_label}",
+            bar_title=f"{'Selected' if bar_selected_x is not None else ('Final' if final_bar_metric else 'Best')} {y_label}",
             save_path=save_path,
             show=True,
             ylim=_unit_interval_ylim(y_key),
             annotate_pvalues=not args.disable_pvalue_analysis,
             higher_is_better=not y_key.endswith("success_eps_time"),
+            bar_value_mode="final" if final_bar_metric else "best",
             bar_selected_x=bar_selected_x,
             integer_bar_labels=y_key == "misc/success_episodes",
         )

@@ -124,10 +124,12 @@ N_JOBS=1 TASK_IDS=28 SCRIPT_TIME=readme_gpu_smoke \
 Training is launched through the per-experiment shell scripts under
 `exec/TSIL/train/entrypoints`.
 
-`N_JOBS` controls how many Hydra jobs run in parallel on the local machine.
-Use `N_JOBS=1` for a single-task example, and increase it only when the machine
-has enough compute capacity. See the Results Layout section for the saved
-output directory structure.
+`N_JOBS` controls how many Hydra jobs run in parallel on the local machine;
+it defaults to `1` for safe public examples. `GPUS` optionally overrides the
+launcher GPU list, for example `GPUS=0,1,2,3` or `GPUS='[0,1,2,3]'`. The
+launcher trusts this list and does not auto-detect available GPUs, so include
+only devices that are visible on the machine. See the Results Layout section
+for the saved output directory structure.
 
 Single-task MT01 example:
 
