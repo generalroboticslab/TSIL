@@ -5,7 +5,7 @@
 <p align="center">
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-blue"></a>
   <a href="https://colab.research.google.com/github/generalroboticslab/TSIL/blob/main/notebooks/TSIL_demo.ipynb"><img alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg"></a>
-  <img alt="YouTube" src="https://img.shields.io/badge/YouTube-coming_soon-red">
+  <a href="https://www.youtube.com/watch?v=Nng0trpbqW8"><img alt="YouTube" src="https://img.shields.io/badge/YouTube-video-red"></a>
   <a href="https://arxiv.org/abs/2606.19752"><img alt="Paper" src="https://img.shields.io/badge/Paper-arXiv%3A2606.19752-b31b1b"></a>
   <a href="https://generalroboticslab.com/TSIL"><img alt="Project Page" src="https://img.shields.io/badge/Project%20Page-TSIL-007ec6"></a>
 </p>
