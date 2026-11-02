@@ -1,0 +1,22 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Local experiments and tools
+/results/
+/runs/
+wandb/
+*.log
+.vscode/
+.idea/
+.codex/
+.agents/
+.tsilpp_worktrees/
+/notebooks/tsil_demo_outputs/
